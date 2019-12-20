@@ -5,7 +5,19 @@
 
 
 
-## lib tree:
+## results:
+gio normal maximum comutation: 1.66mhz
+
+
+```
+    while(1) {
+        gpio_set_level(GPIO_OUTPUT_IO_0, 1);
+        gpio_set_level(GPIO_OUTPUT_IO_0, 0);
+    }
+```
+
+
+## ESP32  basic lib tree:
 
 
    ```
