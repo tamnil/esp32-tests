@@ -102,16 +102,15 @@ void app_main(void)
     gpio_isr_handler_remove(GPIO_INPUT_IO_0);
     //hook isr handler for specific gpio pin again
     gpio_isr_handler_add(GPIO_INPUT_IO_0, gpio_isr_handler, (void*) GPIO_INPUT_IO_0);
+/*
+ *
+ * Maximum frequency read: 1.66 Mhz
+ * */
 
-    int cnt = 0;
+
     while(1) {
-        /* printf("cnt: %d\n", cnt++); */
-        /* vTaskDelay(1 / portTICK_RATE_MS); */
-        /* vTaskDelay(0.01); */
         gpio_set_level(GPIO_OUTPUT_IO_0, 1);
-        /* vTaskDelay(0.01); */
         gpio_set_level(GPIO_OUTPUT_IO_0, 0);
-        /* gpio_set_level(GPIO_OUTPUT_IO_1, cnt % 2); */
     }
 }
 
